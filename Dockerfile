@@ -4,12 +4,11 @@ ENV NODE_ENV=development
 
 WORKDIR /app
 
-COPY ["package.json","package-lock.json","./"]
+COPY . .
 
 
 RUN npm install --production
 
-COPY . .
 
 EXPOSE 5252
 
